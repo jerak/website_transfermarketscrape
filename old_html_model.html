@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title id="title">Voetbal Project</title>
+  
+  <meta name="author" content="your name" />
+  <meta name="description" content="" />
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <?php 
+    include 'C:\Users\Bart\xampp\htdocs\website_transfermarketscrape\database_connection.php';
+  ?>
+
+</head>
+<body id="body">
+
+  <div id="page">
+    <div id="logo">
+      <h1><a href="/" id="team.html">Ultimate Team WC 2018</a></h1>
+    </div>
+    <div id="nav">
+      <div id='cssmenu'>
+        <ul>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="spelregels.html">Spelregels</a></li>
+          <li><a href="tussenstand.html">Tussenstand</a></li>
+          <li><a href="topscorers.html">Topscorers</a></li>
+          <li><a href="punten.html">Punten</a></li>
+          <li><a href="over Ons.html">Over Ons</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <h2>Teamsamensteller</h2>
+      <p> Stel hier uw team samen op basis van de volgende regels: </p>
+       - Maximaal één spelers per land <br>
+       - Het totale geïnvesteerde bedrag mag het spelersbudget niet overschrijden  
+      <p> De volledige spelregels en puntenverdeling vindt u <a href="/Spelregels.html"><u>hier.</u></a></p>
+    </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      
+      <div id="wrapper_countryimages">
+        <table class="countrydatabase_table">
+          <tr id="tr_earthflag">
+              <td colspan="2" ><img class="countryimages" id="earthflag" value="Earth" src="../website_transfermarketscrape/Country_Images/Earth.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Algeria" src="../website_transfermarketscrape/Country_Images/Algeria.jpg"></img></td>
+              <td><img class="countryimages" value="Argentina" src="../website_transfermarketscrape/Country_Images/Argentina.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Australia" src="../website_transfermarketscrape/Country_Images/Australia.jpg"></img></td>
+              <td><img class="countryimages" value="Belgium" src="../website_transfermarketscrape/Country_Images/Belgium.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Bosnia-Herzegovina" src="../website_transfermarketscrape/Country_Images/Bosnia-Herzegovina.jpg"></img></td>
+              <td><img class="countryimages" value="Brazil" src="../website_transfermarketscrape/Country_Images/Brazil.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Cameroon" src="../website_transfermarketscrape/Country_Images/Cameroon.jpg"></img></td>
+              <td><img class="countryimages" value="Chile" src="../website_transfermarketscrape/Country_Images/Chile.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Colombia" src="../website_transfermarketscrape/Country_Images/Colombia.jpg"></img></td>
+              <td><img class="countryimages" value="Costa%20Rica" src="../website_transfermarketscrape/Country_Images/Costa Rica.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Croatia" src="../website_transfermarketscrape/Country_Images/Croatia.jpg"></img></td>
+              <td><img class="countryimages" value="Ecuador" src="../website_transfermarketscrape/Country_Images/Ecuador.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="England" src="../website_transfermarketscrape/Country_Images/England.jpg"></img></td>
+              <td><img class="countryimages" value="France" src="../website_transfermarketscrape/Country_Images/France.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Germany" src="../website_transfermarketscrape/Country_Images/Germany.jpg"></img></td>
+              <td><img class="countryimages" value="Ghana" src="../website_transfermarketscrape/Country_Images/Ghana.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Greece" src="../website_transfermarketscrape/Country_Images/Greece.jpg"></img></td>
+              <td><img class="countryimages" value="Honduras" src="../website_transfermarketscrape/Country_Images/Honduras.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Iran" src="../website_transfermarketscrape/Country_Images/Iran.jpg"></img></td>
+              <td><img class="countryimages" value="Italy" src="../website_transfermarketscrape/Country_Images/Italy.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Ivory%20Coast" src="../website_transfermarketscrape/Country_Images/Ivory Coast.jpg"></img></td>
+              <td><img class="countryimages" value="Japan" src="../website_transfermarketscrape/Country_Images/Japan.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Mexico" src="../website_transfermarketscrape/Country_Images/Mexico.jpg"></img></td>
+              <td><img class="countryimages" value="Netherlands" src="../website_transfermarketscrape/Country_Images/Netherlands.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Nigeria" src="../website_transfermarketscrape/Country_Images/Nigeria.jpg"></img></td>
+              <td><img class="countryimages" value="Portugal" src="../website_transfermarketscrape/Country_Images/Portugal.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Russia" src="../website_transfermarketscrape/Country_Images/Russia.jpg"></img></td>
+              <td><img class="countryimages" value="South%20Korea" src="../website_transfermarketscrape/Country_Images/South Korea.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Spain" src="../website_transfermarketscrape/Country_Images/Spain.jpg"></img></td>
+              <td><img class="countryimages" value="Switzerland" src="../website_transfermarketscrape/Country_Images/Switzerland.jpg"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="United%20States" src="../website_transfermarketscrape/Country_Images/United States.jpg"></img></td>
+              <td><img class="countryimages" value="Uruguay" src="../website_transfermarketscrape/Country_Images/Uruguay.jpg"></img></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="wrapper_players">
+        <table class="playerdatabase_table" cellspacing="0">
+          <tr class="playerdatabase_rows">
+          <th class="column_country_img"></th>
+          <th class="column_name" ><input type="search" id="column_name_searchbox" onkeyup="search()" placeholder="Search for names"></th>
+          <th class="column_positie"><select type="text" id="column_positie_searchbox" onchange="search()"> 
+            <option value="allen">Allen</option>
+            <option value="aanvaller">Aanvaller</option>
+            <option value="middenvelder">Middenvelder</option>
+            <option value="verdediger">Verdediger</option>
+            <option value="keeper">Keeper</option>
+          </th>
+          <th class="column_waarde"><input type="search" id="column_waarde_searchbox" onkeyup="search()" placeholder="Search for value"></th>
+          </tr>
+        </table>
+      </div>
+
+      <div id="playerprofile">
+      </div>
+
+  </div>
+
+</div>
+
+<div class="table_container">
+<table class="dashboard_table" cellpadding="10px" cellspacing="0px">
+  <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><image  id= "left-winger" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "striker" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "right-winger" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><image  id= "left-midfielder" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "centre-midfielder" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "right-midfielder" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td></td>
+      </tr>
+       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><image  id= "left-back" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "left-centre-back" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "right-centre-back" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td><image  id= "right-back" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+      </tr>
+       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><image  id= "keeper" src="../website_transfermarketscrape/other_images/neutral_jersey.png" onclick="openModal(this.id)"></image></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    </div>
+    </div>
+      </p>
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+
+  <script src="jquery-3.2.1.js"></script>
+  <script src="team.js"></script>
+
+
+</body>
+</html>
+
