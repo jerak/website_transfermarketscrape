@@ -1,0 +1,327 @@
+/*
+* multi-line comment
+*/
+
+
+
+body{
+    font-family: arial; 
+    font-size: 80%; 
+    line-height: 
+    1.2em; 
+    margin: auto; 
+    background: #eee;
+}
+
+
+.table_container{
+	width: 90%;
+	margin: auto;
+}
+
+.dashboard_table{
+	display: table-row;
+	width: 360px;
+	height: 360px;
+	background-size: 100% 100%;
+	background-image: url(../other_images/soccerfield.png);
+	opacity: 0.8;
+}
+
+
+
+#tshirtButton:hover{
+ filter: brightness(80%);
+}	
+
+.dashboard_table td{
+	width: 7%;
+	height: 40px;
+    margin: 0;
+    padding: 5px;
+	border: #000000 0px solid;
+}
+
+td > img{
+	width: 100%;
+	display: block;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+
+/* Modal Content */
+.modal-content {
+    background: linear-gradient(-90deg, grey, rgba(0,0,26, 0.90) 40%);
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 65%;
+    height: 80%;
+    overflow:hidden;   
+    border: grey 2px outset;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#wrapper_countryimages{
+    display: block;
+    border-bottom: white 2px solid;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    border-radius: 10%;
+}
+
+#td_earthflag{
+  background-color: grey;
+}
+
+#earthflag{
+    height: 30px;
+    width: 50px;
+}
+
+.countryimages{
+    width: 20px;
+    height: 12px;
+    margin: 3px;
+    border: white 1px outset;
+
+}
+
+.countrydatabase_table{
+  margin: auto;
+}
+
+.countrydatabase_table tr td{
+  border-radius: 15%;
+}
+
+.countrydatabase_table tr td:hover{
+  opacity: 0.8;
+  background-color: grey!important;
+}
+
+
+#wrapper_players{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8px;
+    color: #ffffff;
+    overflow-y: scroll;
+    height: 87%;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-button{
+
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  height:50px;
+  background-color: silver;
+  border: 1px #444444 inset;
+}
+
+.playerdatabase_table{
+   text-align:center;
+   width: 100%;
+}
+
+.playerdatabase_table tr{
+    height: 35px;
+}
+
+.playerdatabase_table tr:nth-child(even){
+    background-color: rgba(211,211,211, 0.2);
+
+}
+
+.playerdatabase_table tr:nth-child(odd){
+      background-color: rgba(211,211,211, 0.25);
+
+}
+
+.playerdatabase_table tr:not(:first-child):hover{
+    opacity: 0.8!important;
+    background-color: #a3a3a3!important;
+    cursor: pointer;
+}
+
+.playerdatabase_table tr th{
+    border-top: black 1px solid;
+    border-bottom: black 2px solid;
+}
+
+
+
+.column_country_img{
+   width: 10%; 
+}
+
+.column_country_img img{
+  border: grey 1px outset;
+  width: 24px ;
+  margin-left: 5px;
+}
+
+.column_player_img{
+
+}
+
+#column_name_searchbox{
+  height: 25px;
+  width: 100%;
+  border: none;
+  background-color: rgba(211,211,211, 0.0);
+  color: white;
+}
+
+
+.column_name{
+  width: 35%;
+}
+
+#column_positie_searchbox{
+  height: 28px;
+  width: 100%;
+  border: none;
+  background-color: rgba(211,211,211, 0.0);
+  color: silver;
+}
+
+#column_positie_searchbox option{
+  background-color: rgba(211,211,211, 0.2);
+  color: #606060;
+}
+
+.column_positie{
+  width: 25%;
+}
+
+#wrapper_column_waarde{
+  position:relative;
+}
+
+#column_waarde_searchbox{
+  height: 25px;
+  width: 100%;
+  border: none;
+  background-color: rgba(211,211,211, 0.0);
+  color:white;
+  text-indent: 20px;
+}
+
+.column_waarde{
+  width: 30%;
+}
+
+#column_waarde_sort{
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+::placeholder { 
+    color: silver;
+}
+
+#playerprofile{
+  width: 15%;
+  height: 350px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 55px;
+  margin-top: 25px;
+  position: absolute;
+  text-align: center;
+  background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+  border: 4px  rgba(218,165,32, 1) outset;
+}
+
+.playerprofile_img{
+    display: inline-block;
+    margin: 15px auto;
+    box-shadow: 3px 3px 10px #888888;
+    padding: 3px;
+    padding-bottom: 1px;
+    background-color: #fcf4f4;
+    border: grey 1px solid;
+}
+
+.playerprofile_img img{
+  height: 160px;
+}
+
+#table_playerprofile{
+    border-spacing:3px;
+    width: 100%;
+}
+
+#table_playerprofile tr:first-child td:first-child{
+     width: 30%;
+}
+
+#table_playerprofile tr:nth-child(2) td:nth-child(2){
+     width: 12%;
+}
+
+#table_playerprofile tr:nth-child(2) td:nth-child(3){
+     width: 58%;
+}
+
+
+#table_playerprofile tr td{
+}
+
+.tablerow_playerprofile{
+  text-align: left;
+  margin-left: 5px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.tablerow_playerprofile_club_img{
+    height: 26px;
+    width: 18px;
+}
+

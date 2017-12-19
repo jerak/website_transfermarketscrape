@@ -1,5 +1,5 @@
 <?php
-	include_once('C:\Users\Bart\xampp\htdocs\website_transfermarketscrape\database_connection.php');
+	include_once('..\website_transfermarketscrape\database_connection.php');
 
 
 	$sql_selectplayers = "SELECT * FROM spelers ORDER BY waarde DESC" ;
