@@ -48,13 +48,53 @@
 		<a class="navbar_item">Over ons</a>
 	</div>
 
+	<!-- Contant such as pitch, jerseys, all content between navigation bar and footer -->
 	<div id="main_content">
-
 		<div id="pitch_image_wrapper">
-			<img id="image_pitch" src="other_images/pitch.png"></img>
-			<img id="test_jersey" src="other_images/neutral_jersey.png"></img>
+			<table id="table_on_pitch">
+			</table>
 		</div>
 
+		<div id="rules_wrapper"> 
+			<div id="rules_title">Rules
+			</div>
+			<table id="table_money_accumulator">
+				<tbody>
+					<tr>
+						<td class="money_accumulator">Money limit:</td>
+						<td class="money_accumulator money_updater">€70.000.000,-</td>
+					</tr>
+					<tr>
+						<td class="money_accumulator">Total money spend:</td>
+						<td class="money_accumulator money_updater">€0,-</td>
+					</tr>
+					<tr>
+						<td class="money_accumulator">Total money left:</td>
+						<td class="money_accumulator money_updater">€70.000.000,-</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="rule_withincashlimit">Within cash limit
+				<div class="check_icon_div"> 
+					<img class="check_icon" src="/website_transfermarketscrape/other_images/icon_check.png" ></img>
+				</div>
+			</div>
+			<div id="rule_oneplayerpercountry">One player per country
+				<div class="check_icon_div">
+					<img class="check_icon" src="/website_transfermarketscrape/other_images/icon_check.png" ></img>
+				</div>
+			</div>
+			<div id="rule_elevenplayersselected">Eleven players 
+				<div class="check_icon_div">
+					<img class="check_icon" src="/website_transfermarketscrape/other_images/icon_cross.png" ></img>
+				</div>
+			</div>
+
+			<button id="confirmbutton" type="button">Confirm Team</button>
+
+			<div id="plus_icon">-
+			</div>
+		</div>
 	</div>
 
 <!-- The Modal -->

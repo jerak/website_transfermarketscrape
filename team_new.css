@@ -147,25 +147,28 @@
 
 
 #container_navigationbar{
-	background-color: #333;
-	width: 80%;
-	height: 50px;
+/*      border: 4px  rgba(218,165,32, 1) outset;
+*/
+  /*background: -webkit-gradient(linear, 0 0, 100% 0, from(#262640), to(#595972), color-stop(50%, #5c5c75));*/
+  background-opacity:0.5;
 	text-align: center;
 	overflow: hidden;
 	margin: auto;
-	
+  width: 80%;
+  border-top: 1px black solid;
 }
 
-
 .navbar_item{
-	background-color: green;
 	display: inline-block;
-  	padding: 16px 16px;
+  padding: 16px 16px;
 	height: 100%;
 }
 
 .navbar_item:hover{
-	background-color: black;
+	
+  cursor: pointer;
+  border: 1px rgba(218,165,32, 1) solid;
+  padding: 15px 15px;
 }
 
 /* Main content div with pitch, jerseys etc. */
@@ -174,6 +177,7 @@
 	width: 80%;
  	height: 1000px;
  	margin: auto;
+ 	position: relative;
 }
 
 #pitch_image_wrapper{
@@ -182,37 +186,166 @@
  	width: 100%;
  	padding: 0;
  	margin: auto;
- 	border: 1px red solid;
- 	top: 0;
- 	left: 0;
-
 }
 
-#image_pitch{
-	position: relative;
-	display: inline-block;
- 	height: 600px;
- 	width: 100%;
- 	top:0;
- 	left: 0;
-}
-
-#test_jersey{
+#table_on_pitch{	
+	background: url("other_images/pitch.png") no-repeat;
+	background-size: 100% 700px;
+	background-position: center;
 	position: absolute;
-	margin: auto;
 	bottom: 0;
 	top: 0;
 	left: 0;
 	right: 0;
+	margin: auto;
+	width: 80%;
+	height: 600px;
+	table-layout: fixed;
+	border-collapse:collapse;
+}
+
+
+.pitch_table_rows td{
 	height: 50px;
 }
 
+.test_jersey{
+	height: 50px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test_jersey:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.name_under_jersey{
+	font-size:10px;
+  height: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.value_under_jersey{
+  font-size:10px;
+  height: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#rules_wrapper{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 285px;
+	width: 21%;
+	margin-right: -30px;
+	margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+  color: white;
+
+}
+
+#rules_title{
+  font-size:20px;
+  padding-bottom: 5px;
+  border-bottom: 4px  rgba(218,165,32, 1) double;
+  width: 80%;
+  margin: auto;
+}
+
+#table_money_accumulator td{
+  padding: 3px;
+}
+
+#table_money_accumulator tr:nth-child(2) td:nth-child(2){
+     border-bottom: 1px  rgba(218,165,32, 1) solid;
+
+}
+
+.money_accumulator{
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+}
+
+#rule_withincashlimit{
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 5px 3px 5px;
+    padding: 5px;
+    text-align: left;
+    font-size:14px;
+}
+
+#rule_oneplayerpercountry{
+    height: 25px;
+    line-height: 25px;
+    margin: 3px 5px;
+    padding: 5px;
+    text-align: left;
+    font-size:14px;
+}
+
+#rule_elevenplayersselected{
+    height: 25px;
+    line-height: 25px;
+    margin: 3px 5px 8px 5px;
+    padding: 5px;
+    text-align: left;
+    font-size:14px;
+}
+
+.check_icon_div{
+    float:right;
+    height: 15px;
+    margin-top: 5px;
+    width: 15px;
+}
+
+.check_icon{
+    height: 15px;
+    display: block;
+}
+
+#confirmbutton{
+    background: rgba(218,165,32, 1);
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#confirmbutton:hover{
+  opacity:0.5;
+}
+
+#confirmbutton:focus{
+  outline: none;
+}
+
+
+#plus_icon{
+  font-size: 22px;
+  position: absolute;
+  left: 210px;
+  top: 85px;
+  display: inline-block;
+}
 
 /* modal that poppes up when clicking the jersey*/
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 100; /* Sit on top */
     padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
@@ -235,7 +368,12 @@
     border: grey 2px outset;
     font-family: arial;
     font-size: 80%; 
- 	line-height: 1.2em; 
+ 	  line-height: 1.2em;
+ 	/*make text unselectable*/
+ 	-webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
 }
 
 /* The Close Button */
@@ -276,6 +414,7 @@
     margin: 3px;
     margin-top: 5px;
     border: white 1px outset;
+    cursor: pointer;
 
 }
 

@@ -17,6 +17,11 @@ body{
 .table_container{
 	width: 90%;
 	margin: auto;
+  border: 1px red solid;
+}
+
+.table_container tr td{
+  border: 1px blue solid;
 }
 
 .dashboard_table{

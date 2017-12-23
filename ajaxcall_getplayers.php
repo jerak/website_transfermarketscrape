@@ -8,11 +8,9 @@
 
 	$sql_result = mysqli_query($conn, $sql_selectplayers);
 
-
 	if ($conn->connect_error) {
    		die("Connection failed: " . $conn->connect_error);
 	}	
-
 
 	$array_playerslist = array();
 	$array_playerscountry = array();
