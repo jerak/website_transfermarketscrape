@@ -6,6 +6,7 @@
 #body{
   	background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 /* Image slider (playercards) */
@@ -174,7 +175,7 @@
 
 #main_content{
 	width: 80%;
- 	height: 1000px;
+ 	height: 700px;
  	margin: auto;
  	position: relative;
 }
@@ -627,4 +628,73 @@
     width: 18px;
 }
 
+/* ---------------------------- FOOTER ----------------------------*/
+#footer{
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  border: 1px black solid;
+  background-color:#0d0d27;
+}
+
+#footer_bottomCol{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #0e0e44;
+
+}
+
+.footer_bottomCol_class{
+  width: 350px;
+  color: white;
+}
+
+#footer_bottomCol_left{
+  float: left;
+  cursor: default;
+  margin-left: 10px;
+}
+
+
+#footer_bottomCol_center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+#socialmedia{
+  list-style-type: none;
+}
+
+.socialmedia_item{
+  display: inline;
+  margin-right: 10px;
+}
+
+.socialmedia_item img{
+  height: 35px;
+}
+
+.socialmedia_item img:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#footer_bottomCol_right{
+  float:right;
+  text-align: right;
+}
+
+.menu_privacy_item{
+   display: inline;
+   margin-right: 25px;
+   cursor: pointer; 
+}
+
+.menu_privacy_item:hover{
+  opacity: 0.8;
+}
 
