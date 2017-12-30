@@ -24,7 +24,6 @@
 		$array_playersclub[] = $row['club'];
 		$array_playerspositie[] = $row['positie'];	
 		$array_playerswaarde[] = $row['waarde'];	
-
 	}
 
 	

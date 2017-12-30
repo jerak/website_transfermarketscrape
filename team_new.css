@@ -147,9 +147,6 @@
 
 
 #container_navigationbar{
-/*      border: 4px  rgba(218,165,32, 1) outset;
-*/
-  /*background: -webkit-gradient(linear, 0 0, 100% 0, from(#262640), to(#595972), color-stop(50%, #5c5c75));*/
   background-opacity:0.5;
 	text-align: center;
 	overflow: hidden;
@@ -162,6 +159,8 @@
 	display: inline-block;
   padding: 16px 16px;
 	height: 100%;
+  text-decoration: none;
+  color:black;
 }
 
 .navbar_item:hover{

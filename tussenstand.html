@@ -8,32 +8,47 @@
   <meta name="author" content="your name" />
   <meta name="description" content="" />
 
-  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="tussenstand.css" type="text/css" />
   
 </head>
-<body>
+<body id="body">
 
-  <div id="page">
-    <div id="logo">
-      <h1><a href="/" id="Team.html">Ultimate Team WC 2018</a></h1>
-    </div>
-    <div id="nav">
-      <div id='cssmenu'>
-        <ul>
-          <li><a href="Team.html">Team</a></li>
-          <li><a href="Spelregels.html">Spelregels</a></li>
-          <li><a href="Tussenstand.html">Tussenstand</a></li>
-          <li><a href="Topscorers.html">Topscorers</a></li>
-          <li><a href="Punten.html">Punten</a></li>
-          <li><a href="OverOns.html">Over Ons</a></li>
-        </ul>
-</div>
-       
-    </div>
-    <div id="content">
-      <h2>Tussenstand</h2>
-      
+    <!--Image slider-->
+    <div id="carrousel_container">
 
+      <div id="container_images" >
+
+      </div>
+    </div>
+
+    <!--Navigation bar-->
+    <div id="container_navigationbar">
+      <a href="/website_transfermarketscrape/team_new.html" class="navbar_item">Team</a>
+      <a href="/website_transfermarketscrape/spelregels.html" class="navbar_item">Spelregels</a>
+      <a class="navbar_item">Tussenstand</a>
+      <a class="navbar_item">Topscorers</a>
+      <a class="navbar_item">Punten</a>
+      <a class="navbar_item">Over ons</a>
+    </div>
+
+    <!-- div with extra text (information) -->
+    <div id="information_text"> Wij adviseren iedereen om zijn of haar punten ten alle tijden na te tellen. </div>
+
+    <!-- Table with all participants -->
+    <div id="participants_div">
+      <table id="participants_table">
+        <tr>
+          <th>Rang</th>
+          <th>Naam deelnemer</th>
+          <th>Punten</th>
+        <tr>
+
+      </table>
+    </div>
+
+
+    <script src="jquery-3.2.1.js"></script>
+  <script src="tussenstand.js"></script>
 </body>
 </html>
 

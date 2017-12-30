@@ -213,7 +213,7 @@ function getPlayers(){
 						sortable_array_player_country.push(data.playerscountry[key]);
 						//$('#container_images').append('<div class="player_card_carrousel"><img class="player_card_carrousel_img" src="' + img_player + '"></img></div>');
             	});
-            	success: initialfillplayercards();
+            	initialfillplayercards();
             }
         });
 }
@@ -959,7 +959,7 @@ $(document).on('dblclick', '.playerdatabase_rows', function() {
 
 	//If image is not found then this function is run and the plain shirt is used
 	jerseyclicked[0].onerror = function(){
-		jerseyclicked[0].src = '/website_transfermarketscrape/Team_Shirts/Iceland.png';	
+		jerseyclicked[0].src = '/website_transfermarketscrape/Team_Shirts/Plain Shirt.png';	
 	}
 
 
@@ -1074,7 +1074,7 @@ $('#confirmbutton').click(function(){
 	}else{
 		$(this).text('Confirmed!');
 
-		var managername = JSON.stringify("BartNewNEWNEW");
+		var managername = JSON.stringify("MANAJURJEROEN");
 		var password = JSON.stringify("WACHTWOORDBART");
 		var selectedplayers = JSON.stringify(array_players_selected);
 		console.log(array_players_selected.length);
@@ -1083,11 +1083,7 @@ $('#confirmbutton').click(function(){
             url: 'database_sendteam.php',
             data: {managername: managername, password: password, selectedplayers: selectedplayers},
             dataType: 'text',
-			error: function(response) { alert(JSON.stringify(response))},
-
-            /*success: function(data){
-            	alert("SUCCES");
-            }*/
+			error: function(response) { alert(JSON.stringify(response))}
         });	
 		
 	}
@@ -1100,3 +1096,31 @@ $('#confirmbutton').click(function(){
 
 
 
+// <!---------------- SPELREGELS TABBLAD ------------------------------->
+//When clicking the arrow the div gets bigger and the full text can be read
+/*$('.continue_button').click(function(){
+
+	if($(this).attr('src').indexOf("down") > 0){
+		$(this).attr('src', '/website_transfermarketscrape/other_images/up_arrow.png');
+
+		var id_div = $(this).parent().attr('id');
+		$('#' + id_div).animate({height: '400px'}, {duration: 500, queue: false});
+		$('#' + id_div).animate({width: '400px'}, {duration: 500, queue: false});
+
+		var ul_in_div = $(this).parent().children('ul').attr('id');
+		$('#' + ul_in_div).css("height", "310px");
+		$('#' + ul_in_div).css("width", "400px");
+	}else{
+		$(this).attr('src', '/website_transfermarketscrape/other_images/down_arrow.png');
+
+		var id_div = $(this).parent().attr('id');
+		$('#' + id_div).animate({height: '290px'}, {duration: 500, queue: false});
+		$('#' + id_div).animate({width: '300px'}, {duration: 500, queue: false});
+
+
+		var ul_in_div = $(this).parent().children('ul').attr('id');
+		$('#' + ul_in_div).animate({height: '200px'}, {duration: 500, queue: false});
+		$('#' + ul_in_div).animate({width: '300px'}, {duration: 500, queue: false});
+	}
+});
+*/
