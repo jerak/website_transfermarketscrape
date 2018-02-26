@@ -1,0 +1,812 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#body{
+  	background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Header */ 
+#header{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-family: Lucida Sans Unicode;
+}
+
+#header_logo{
+  display: inline-block;
+  width: 100px;             
+  height: 100%;
+  float:left;
+  margin-left: 175px;
+  margin-top: 10px;
+}
+
+#header_logo img{
+  max-width:100%;
+  max-height:80px;
+}
+
+#header_title{
+  display:inline-block;
+  line-height: 100px;
+  float: center;
+  font-size: 30px;
+  color: white;
+}
+
+#signoutbutton{
+  float: right;
+  margin: 25px;
+  margin-right: 175px;
+  width: 100px;
+  line-height: 45px;
+  background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+  border: 2px  rgba(218,165,32, 1) outset;
+  text-align: center;
+  color: white;
+}
+
+#signoutbutton:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+
+/* Navigation Bar */
+#container_navigationbar{
+  background-opacity:0.5;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  border-top: 1px black solid;
+  font-family: Lucida Sans Unicode;
+}
+
+.navbar_item{
+  display: inline-block;
+  padding: 16px 16px;
+  height: 100%;
+  text-decoration: none;
+  color:black;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+
+/* this creates on hover effect */
+.navbar_item:after {
+  display: block;                     /* content (line appearing) needs to be underneath nav item */
+  margin: auto;                       /* content in middle so line appears from middle to sides */
+  width: 0%;                          /* current no width, on hover it will become >0% and thus visible*/
+  content: '';                        /* This content is added (nothing) */
+  color: transparent;                 /* since its transparent you dont see the content*/
+  background: rgba(218,165,32, 1);    /* The content has a background color which becomes visible on hover */
+  height: 1px;                        /* The line that will become visible is 1px height */
+  transition: all .5s;                /* the transition takes 0.5 sec */
+
+}
+.navbar_item:hover:after {
+  width: 100%;
+}
+
+.navbar_item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+/* Image slider (playercards) */
+#carrousel_container{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin: auto;
+	overflow:hidden;
+
+}
+	
+#container_images{
+	position:absolute;
+    left:0;
+    right:0;
+    width: 200%;
+	height: 400px;
+	padding-top: 10px;
+	background: transparent;
+
+}
+
+.player_card_carrousel{
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: inline-block;
+	height: 150px;
+	width: 210px;
+	background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+  	border: 4px  rgba(218,165,32, 1) outset;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	overflow:hidden;
+}
+
+
+
+.player_card_carrousel_img{
+	height: 90px;
+	background-color: #fcf4f4;
+    border: grey 1px solid;
+    box-shadow: 3px 3px 10px #888888;
+    padding: 3px;
+   	display: block;
+	margin: 15px auto;
+
+}
+
+
+.playerprofile_arrowleft{
+	width: 10px;
+	height: 16px;
+	margin-left: 5px;
+}
+
+.playerprofile_arrowleft:hover{
+	opacity: 0.8;
+	filter: brightness(200%);
+}
+
+.playerprofile_arrowright{
+	width: 10px;
+	height: 16px;
+	margin-right: 5px;
+	float: right;
+}
+
+.playerprofile_arrowright:hover{
+	opacity: 0.8;
+	filter: brightness(200%);
+
+}
+
+#table_playerprofile_carrousel{
+	border-spacing:5px;
+	height: 100px;
+	margin-left: 3px;
+	width: 100%;
+}
+
+
+.tablerow_playerprofile_carrousel{
+	text-align: left;
+  	padding-bottom: 10px;
+  	color: white;
+  	font-size: 0.8em;
+}
+
+#table_playerprofile_carrousel tr:first-child td:first-child{
+     width: 30%;
+}
+
+#table_playerprofile_carrousel tr:nth-child(2) td:nth-child(2){
+     width: 12%;
+}
+
+#table_playerprofile_carrousel tr:nth-child(2) td:nth-child(3){
+     width: 58%;
+}
+
+.tablerow_playerprofile_carrousel_club_img{
+	height: 26px;
+    width: 18px;
+}
+
+.player_card_carrousel_blur{
+	filter: blur(5px);
+ 	
+}
+
+.player_card_carrousel_blur_fade_out{
+	animation: blur_fade_out 0.5s forwards;
+    -webkit-animation: blur_fade_out 0.5s forwards ;
+    -moz-animation: blur_fade_out 0.5s forwards;
+
+}
+
+.player_card_carrousel_blur_fade_in{
+	animation: blur_fade_in 0.5s;
+    -webkit-animation: blur_fade_in 0.5s ;
+    -moz-animation: blur_fade_in 0.5s;
+
+}
+
+@keyframes blur_fade_in{
+	0% { -webkit-filter: blur(5px);}
+	100% { -webkit-filter: blur(0px);}
+}
+
+@keyframes blur_fade_out {
+  	0% { -webkit-filter: blur(0px);}
+	100% { -webkit-filter: blur(5px);}
+}
+
+/* Main content div with pitch, jerseys etc. */
+
+#main_content{
+	width: 80%;
+ 	height: 700px;
+ 	margin: auto;
+ 	position: relative;
+}
+
+#pitch_image_wrapper{
+	position: relative;
+	height: 600px;
+ 	width: 100%;
+ 	padding: 0;
+ 	margin: auto;
+}
+
+#table_on_pitch{	
+	background: url("../other_images/pitch.png") no-repeat;
+	background-size: 100% 700px;
+	background-position: center;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80%;
+	height: 600px;
+	table-layout: fixed;
+	border-collapse:collapse;
+}
+
+
+.pitch_table_rows td{
+	height: 50px;
+}
+
+.test_jersey{
+	height: 50px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test_jersey:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.name_under_jersey{
+	font-size:10px;
+  height: 10px;
+	text-align: center;
+	vertical-align: middle;
+  color: white;
+
+}
+
+.value_under_jersey{
+  font-size:10px;
+  height: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#rules_wrapper{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 285px;
+	width: 21%;
+	margin-right: -30px;
+	margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+  color: white;
+}
+
+#rules_title{
+  font-size:20px;
+  padding-bottom: 5px;
+  border-bottom: 4px  rgba(218,165,32, 1) double;
+  width: 80%;
+  margin: auto;
+}
+
+#table_money_accumulator td{
+  padding: 3px;
+}
+
+#table_money_accumulator tr:nth-child(2) td:nth-child(2){
+     border-bottom: 1px  rgba(218,165,32, 1) solid;
+
+}
+
+.money_accumulator{
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+}
+
+#rule_withincashlimit{
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 5px 3px 5px;
+    padding: 5px;
+    text-align: left;
+    font-size:14px;
+}
+
+#rule_oneplayerpercountry{
+    height: 25px;
+    line-height: 25px;
+    margin: 3px 5px;
+    padding: 5px;
+    text-align: left;
+    font-size:14px;
+}
+
+#rule_elevenplayersselected{
+    height: 25px;
+    line-height: 25px;
+    margin: 3px 5px 8px 5px;
+    padding: 5px;
+    text-align: left;
+    font-size:14px;
+}
+
+.check_icon_div{
+    float:right;
+    height: 15px;
+    margin-top: 5px;
+    width: 15px;
+}
+
+.check_icon{
+    height: 15px;
+    display: block;
+}
+
+#confirmbutton{
+    background: rgba(218,165,32, 1);
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#confirmbutton:hover{
+  opacity:0.5;
+}
+
+#confirmbutton:focus{
+  outline: none;
+}
+
+
+#plus_icon{
+  font-size: 22px;
+  position: absolute;
+  left: 210px;
+  top: 85px;
+  display: inline-block;
+}
+
+/* modal that poppes up when clicking the jersey*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+
+
+/* Modal Content */
+.modal-content {
+    background: linear-gradient(-90deg, grey, rgba(0,0,26, 0.90) 40%);
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 65%;
+    /*height: 80%;*/
+    height: 550px;
+    overflow:hidden;   
+    border: grey 2px outset;
+    font-family: arial;
+    font-size: 80%; 
+ 	  line-height: 1.2em;
+ 	/*make text unselectable*/
+ 	-webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#wrapper_countryimages{
+    display: block;
+    border-bottom: white 2px solid;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    border-radius: 10%;
+  }
+
+#td_earthflag{
+  background-color: grey;
+}
+
+#earthflag{
+    height: 30px;
+    width: 50px;
+}
+
+.countryimages{
+    width: 20px;
+    height: 12px;
+    margin: 3px;
+    margin-top: 5px;
+    border: white 1px outset;
+    cursor: pointer;
+
+}
+
+.countrydatabase_table{
+  margin: auto;
+}
+
+.countrydatabase_table tr td{
+  border-radius: 15%;
+}
+
+.countrydatabase_table tr td:hover{
+  opacity: 0.8;
+  background-color: grey!important;
+}
+
+
+#wrapper_players{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8px;
+    color: #ffffff;
+    overflow-y: scroll;
+    height: 87%;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-button{
+
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  height:50px;
+  background-color: silver;
+  border: 1px #444444 inset;
+}
+
+.playerdatabase_table{
+   text-align:center;
+   width: 100%;
+}
+
+.playerdatabase_table tr{
+    height: 35px;
+}
+
+.playerdatabase_table tr:nth-child(even){
+    background-color: rgba(211,211,211, 0.2);
+
+}
+
+.playerdatabase_table tr:nth-child(odd){
+      background-color: rgba(211,211,211, 0.25);
+
+}
+
+.playerdatabase_table tr:not(:first-child):hover{
+    opacity: 0.8!important;
+    background-color: #a3a3a3!important;
+    cursor: pointer;
+}
+
+.playerdatabase_table tr th{
+    border-top: black 1px solid;
+    border-bottom: black 2px solid;
+}
+
+
+
+.column_country_img{
+   width: 10%; 
+}
+
+.column_country_img img{
+  border: grey 1px outset;
+  width: 24px ;
+  margin-left: 5px;
+}
+
+.column_player_img{
+
+}
+
+#column_name_searchbox{
+  height: 25px;
+  width: 100%;
+  border: none;
+  background-color: rgba(211,211,211, 0.0);
+  color: white;
+}
+
+
+.column_name{
+  width: 35%;
+}
+
+#column_positie_searchbox{
+  height: 28px;
+  width: 100%;
+  border: none;
+  background-color: rgba(211,211,211, 0.0);
+  color: silver;
+}
+
+#column_positie_searchbox option{
+  background-color: rgba(211,211,211, 0.2);
+  color: #606060;
+}
+
+.column_positie{
+  width: 25%;
+}
+
+#wrapper_column_waarde{
+  position:relative;
+}
+
+#column_waarde_searchbox{
+  height: 25px;
+  width: 100%;
+  border: none;
+  background-color: rgba(211,211,211, 0.0);
+  color:white;
+  text-indent: 20px;
+}
+
+.column_waarde{
+  width: 30%;
+}
+
+#column_waarde_sort{
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+::placeholder { 
+    color: silver;
+}
+
+#playerprofile{
+  width: 15%;
+  height: 350px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 55px;
+  margin-top: 25px;
+  position: absolute;
+  text-align: center;
+  background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+  border: 4px  rgba(218,165,32, 1) outset;
+}
+
+.playerprofile_img{
+    display: inline-block;
+    margin: 15px auto;
+    box-shadow: 3px 3px 10px #888888;
+    padding: 3px;
+    padding-bottom: 1px;
+    background-color: #fcf4f4;
+    border: grey 1px solid;
+}
+
+.playerprofile_img img{
+  		height: 160px;
+}
+
+#table_playerprofile{
+    border-spacing:3px;
+    width: 100%;
+}
+
+#table_playerprofile tr:first-child td:first-child{
+     width: 30%;
+}
+
+#table_playerprofile tr:nth-child(2) td:nth-child(2){
+     width: 12%;
+}
+
+#table_playerprofile tr:nth-child(2) td:nth-child(3){
+     width: 58%;
+}
+
+
+#table_playerprofile tr td{
+}
+
+.tablerow_playerprofile{
+  text-align: left;
+  margin-left: 5px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.tablerow_playerprofile_club_img{
+    height: 26px;
+    width: 18px;
+}
+
+/* ---------------------------- FOOTER ----------------------------*/
+#footer{
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  border: 1px black solid;
+  background-color:#0d0d27;
+}
+
+#stay_connected_wrapper{
+  float: left;
+  height: 120px;
+  width: 350px;
+  margin-top:10px;
+  margin-left: 10px;
+  border: 1px black solid;
+  padding: 5px;
+}
+
+#stay_connected_wrapper h1{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#stay_connected_wrapper p{
+  font-size: 12px;
+  color: white;
+  margin-bottom: 3px;
+}
+
+#inputbox_email{
+}
+
+input[type=input_signmeup] {
+  width: 70%;
+  height: 50px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+#inputbox_email input[type=submit] {
+  color: white;
+  display: inline-block;
+  margin-left:-82px;
+  background:#0e0e44;
+  border: none;
+  height: 52px;
+  padding: 5px;
+}
+
+#inputbox_email input[type=submit]:hover{
+  cursor:pointer;
+}
+
+
+#footer_bottomCol{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #0e0e44;
+
+}
+
+.footer_bottomCol_class{
+  width: 350px;
+  color: white;
+}
+
+#footer_bottomCol_left{
+  float: left;
+  cursor: default;
+  margin-left: 10px;
+}
+
+
+#footer_bottomCol_center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+#socialmedia{
+  list-style-type: none;
+}
+
+.socialmedia_item{
+  display: inline;
+  margin-right: 10px;
+}
+
+.socialmedia_item img{
+  height: 35px;
+}
+
+.socialmedia_item img:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#footer_bottomCol_right{
+  float:right;
+  text-align: right;
+}
+
+.menu_privacy_item{
+   display: inline;
+   margin-right: 25px;
+   cursor: pointer; 
+}
+
+.menu_privacy_item:hover{
+  opacity: 0.8;
+}
+

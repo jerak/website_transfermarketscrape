@@ -1,0 +1,151 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#body{
+  	background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+    background-attachment: fixed;
+   	height: 1000px;
+   	overflow-x: hidden;
+}
+
+/* Image slider (playercards) */
+#carrousel_container{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin: auto;
+	overflow:hidden;
+
+}
+
+/* Navigation Bar */
+#container_navigationbar{
+  	background-opacity:0.5;
+	text-align: center;
+	overflow: hidden;
+	margin: auto;
+  	width: 80%;
+  	border-top: 1px black solid;
+}
+
+.navbar_item{
+	display: inline-block;
+  	padding: 16px 16px;
+	height: 100%;
+ 	text-decoration: none;
+    vertical-align: top;
+  	color:black;
+}
+
+/* this creates on hover effect */
+.navbar_item:after {
+  display: block;                     /* content (line appearing) needs to be underneath nav item */
+  margin: auto;                       /* content in middle so line appears from middle to sides */
+  width: 0%;                          /* current no width, on hover it will become >0% and thus visible*/
+  content: '';                        /* This content is added (nothing) */
+  color: transparent;                 /* since its transparent you dont see the content*/
+  background: rgba(218,165,32, 1);    /* The content has a background color which becomes visible on hover */
+  height: 1px;                        /* The line that will become visible is 1px height */
+  transition: all .5s;                /* the transition takes 0.5 sec */
+
+}
+.navbar_item:hover:after {
+  width: 100%;
+}
+
+.navbar_item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Main content of this webpage */
+#maintext{
+	width: 80%;
+	margin: auto;
+	padding: 5px;
+	color: #faebd7;
+}
+
+#wrapper_text_divs{
+	width: 100%;
+	height: 500px;
+	text-align: center;
+}
+
+.textdiv{
+	position: relative;
+	width: 300px;
+	margin: 10px;
+	height: 290px;
+	padding: 10px 20px;
+	display: inline-block;
+	overflow-y: hidden;
+	vertical-align: top;
+}
+
+.textdiv h1{
+	color: #faebd7;
+}
+
+.textdiv p{
+	text-align: justify;
+	overflow:hidden;
+	padding-bottom: 10px;
+	height: 200px;
+}
+
+.textdiv ul{
+	text-align: justify;
+	overflow-y:hidden;
+	padding-bottom: 10px;
+	height: 200px;
+}
+
+.textdiv li{
+	text-align: justify;
+}
+
+.continue_button{
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+}
+
+/*#opzetspel_text{
+	border:1px black solid;
+	display: inline-block;
+}
+
+#spelregels_text{
+	border: 1px red solid;
+	display: inline-block;
+}
+
+#punten_text{
+	border:1px green solid;
+	display: inline-block;
+}*/
+
+
+/* This changes the default scrollbar */
+
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-button{
+
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  height:50px;
+  background-color: silver;
+  border: 1px #444444 inset;
+}

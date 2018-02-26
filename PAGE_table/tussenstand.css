@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#body{
+  	background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+    background-attachment: fixed;
+   	height: 1000px;
+   	overflow-x: hidden;
+}
+
+
+/* Image slider (playercards) */
+#carrousel_container{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin: auto;
+	overflow:hidden;
+
+}
+
+/* Navigation Bar */
+#container_navigationbar{
+  	background-opacity:0.5;
+	text-align: center;
+	overflow: hidden;
+	margin: auto;
+  	width: 80%;
+  	border-top: 1px black solid;
+}
+
+.navbar_item{
+	display: inline-block;
+  	padding: 16px 16px;
+	height: 100%;
+ 	text-decoration: none;
+  	color:black;
+    vertical-align: top;
+}
+
+/* this creates on hover effect */
+.navbar_item:after {
+  display: block;                     /* content (line appearing) needs to be underneath nav item */
+  margin: auto;                       /* content in middle so line appears from middle to sides */
+  width: 0%;                          /* current no width, on hover it will become >0% and thus visible*/
+  content: '';                        /* This content is added (nothing) */
+  color: transparent;                 /* since its transparent you dont see the content*/
+  background: rgba(218,165,32, 1);    /* The content has a background color which becomes visible on hover */
+  height: 1px;                        /* The line that will become visible is 1px height */
+  transition: all .5s;                /* the transition takes 0.5 sec */
+
+}
+.navbar_item:hover:after {
+  width: 100%;
+}
+
+.navbar_item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Main content of this webpage */
+#information_text{
+	width: 80%;
+	margin: 10px auto;
+	color: white;
+}
+
+#participants_div{
+	width: 80%;
+	height: 500px;
+	margin: auto;
+}
+
+#participants_table{
+	width: 100%;
+}
+
+#participants_table th{
+	width: 33%;
+	font-size: 20px;
+	 border-top: black 1px solid;
+    border-bottom: black 4px double;
+}
+
+#participants_table tr td{
+    height: 35px;
+	width: 33%;
+	text-align: center;
+}
+
+#participants_table tr:not(:first-child):hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#participants_table tr td:nth-child(2){
+	text-align: left;
+	padding-left: 10px;
+} 
+
+#participants_table tr:nth-child(even){
+    background-color: rgba(211,211,211, 0.2);
+}
+
+#participants_table tr:not(:first-child):nth-child(odd){
+      background-color: rgba(211,211,211, 1);
+}
+
+#inserted_row:hover{
+	background-color:blue;
+}
+
+#table_on_inserted_pitch{	
+	background: url("../other_images/pitch.png") no-repeat;
+	background-size: 100% 700px;
+	background-position: center;
+	margin: auto;
+	width: 80%;
+	height: 600px;
+	table-layout: fixed;
+	border-collapse:collapse;
+}
+
+.inserted_pitch_table_rows td{
+	height: 50px;
+}
+
+.inserted_pitch_table_rows td:hover{
+
+}
+
+.test_jersey{
+	height: 50px;
+	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
+}
+
+.name_under_jersey{
+	font-size:10px;
+  	height: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.value_under_jersey{
+  font-size:10px;
+  height: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* This changes the default scrollbar */
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-button{
+
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  height:50px;
+  background-color: silver;
+  border: 1px #444444 inset;
+}

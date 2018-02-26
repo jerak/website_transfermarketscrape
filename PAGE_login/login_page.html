@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="login_page.css">
+
+<?php 
+	include '../database_connection_documents/database_connection.php';
+?>
+
+</head>
+<body>
+
+<!-- Logo of the website --> 
+<div class="logo">
+</div>
+
+<!-- Login form -->
+<form autocomplete="off" >
+
+	<label id="label_inloggen"> Inloggen </label>
+	
+	<div id="div_wrapper_email_gebruikersnaam">
+		<input type="email_gebruikersnaam" id="username" name="username" placeholder="Email adress of gebruikersnaam" required>
+	</div>
+	<div id="div_wrapper_wachtwoord_block">
+		<div id="div_wrapper_wachtwoord">
+			<input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+			<span id="span_wachtwoord" onclick="span_wachtwoord()">Vergeten?</span>
+
+		</div>
+		
+	</div>
+	
+	<!-- Div that shows when incorrect username or password -->
+	<div id="div_incorrect_credentials">
+	</div>
+
+	<button type="submit" name="register" class="form_buttons" id="button_registreer">Registreer</button>
+	
+	<button type="submit" name="login" class="form_buttons" id="button_login">Log in</button>
+
+	
+	
+</form>
+
+
+	<script src="../jquery-3.2.1.js"></script>
+	<script src="login_page.js"></script>
+
+</body>
+</html>
