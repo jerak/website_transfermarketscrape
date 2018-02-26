@@ -1,0 +1,217 @@
+var currentSlideIndex = 0;
+
+var array_players = [];
+var array_player_images = [];
+var array_country_images = [];
+var array_player_position = [];
+var array_player_club = [];
+var array_player_value = [];
+var array_player_goals = [];
+var array_player_points = [];
+var array_player_country = [];
+
+var player_counter = 1280;
+
+
+$(document).ready(function(){
+
+	//Define the place of each intial card (with margin left)
+	var playercardsimages = $('.player_card_carrousel_img');
+
+	for(i = playercardsimages.length-1; i >= 0; i--){
+		var marginleft = (-490 + (i * 230));
+		$('#n' + player_counter + '_playercard').css("margin-left", marginleft);
+		player_counter++;
+
+		if(player_counter === 1283){
+			player_counter = 0;
+		}
+	}
+
+	player_counter = 1280;
+
+	//Get the data from Ajax call
+	getPlayers();
+});
+
+function getPlayers(){
+	$.ajax({
+            type: 'POST',
+            url: 'ajaxcall_getplayers.php',
+            dataType: 'json',
+			error: function(response) { alert(JSON.stringify(response))},
+
+            success: function(data){
+            	$.each(data.playerslist, function(key, value){
+  						array_players.push(data.playerslist[key]);
+          			
+            			//All data is stored in arraylist but most of it is not used yet! So it is stored with no purpose!
+            			var img_player = "../website_transfermarketscrape/Player_Images/" + data.playerscountry[key] + " " + data.playerslist[key] + ".jpg";
+            			array_player_images.push(img_player);
+            			array_player_club.push(data.playersclub[key]);
+            			var img_country = "../website_transfermarketscrape/Country_Images/" + data.playerscountry[key] + ".jpg";
+						array_country_images.push(img_country);
+						array_player_position.push(data.playerspositie[key]);
+
+            			//change the notation of the data.playerswaarde[key] --> 2000000 becomes 2.000.000
+						var playerswaarde_newnotation =  "€" + parseInt(data.playerswaarde[key]).toLocaleString('nl-NL', {minimumFractionDigits: 0}) + ",-";
+						array_player_value.push(parseInt(data.playerswaarde[key]));
+
+						array_player_goals.push(data.playersgoals[key]);
+						array_player_points.push(data.playerspoints[key]);
+						array_player_country.push(data.playerscountry[key]);
+						//$('#container_images').append('<div class="player_card_carrousel"><img class="player_card_carrousel_img" src="' + img_player + '"></img></div>');
+            	});
+            	success: initialfillplayercards();
+            }
+        });
+}
+
+
+function initialfillplayercards(){
+	var playercarddivs = $('.player_card_carrousel');
+	var playercardsimages = $('.player_card_carrousel_img');
+
+	for(i = playercardsimages.length-1; i >= 0; i--){
+		playercardsimages[i].src = 	array_player_images[player_counter];
+
+	/*	var marginleft = (-490 + (i * 230));
+		$('#n' + player_counter + '_playercard').css("margin-left", marginleft);*/
+		
+
+		//var playercard = $("#"+ array_playercards[i]);
+		var playercard = $("#n"+ player_counter + "_playercard");
+
+		playercard.append('<table id="table_playerprofile_carrousel"></table>');
+
+    	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Name: </td></b><td>' + array_players[player_counter] +  '</td></tr>');
+  		$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Position: </td></b><td>' +array_player_position[player_counter]+ '</td></tr>');
+    	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Value: </td></b><td>' +array_player_value[player_counter]+ '</td></tr>');
+    	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Club: </td></b><td>' +array_player_club[player_counter]+ '</td></tr>');
+		$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Goals: </td></b><td>' +array_player_goals[player_counter]+ '</td></tr>');
+		$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Country: </td></b><td>' +array_player_country[player_counter]+ '</td></tr>');
+		
+		player_counter++;
+
+		if(player_counter === array_players.length){
+			player_counter = 0;
+		}
+	}
+}
+
+function fillnewplayercard(){
+	var playercard = $("#n"+ player_counter + "_playercard");
+	var playercardsimages = $('.player_card_carrousel_img');
+
+   	$('#n' + player_counter + "_playercard").append('<img class="player_card_carrousel_img" src="' +array_player_images[player_counter]+ '"></img>');
+
+	playercard.append('<table id="table_playerprofile_carrousel"></table>');
+
+   	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Name: </td></b><td>' + array_players[player_counter] +  '</td></tr>');
+	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Position: </td></b><td>' +array_player_position[player_counter]+ '</td></tr>');
+   	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Value: </td></b><td>' +array_player_value[player_counter]+ '</td></tr>');
+   	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Club: </td></b><td>' +array_player_club[player_counter]+ '</td></tr>');
+	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Goals: </td></b><td>' +array_player_goals[player_counter]+ '</td></tr>');
+	$('#n' + player_counter + "_playercard" + ' #table_playerprofile_carrousel').append('<tr class="tablerow_playerprofile_carrousel"><td> <b>Country: </td></b><td>' +array_player_country[player_counter]+ '</td></tr>');
+		
+	player_counter++;
+
+	if(player_counter === array_players.length){
+		player_counter = 0;
+	}
+
+	if(!fillnewplayercard.didrun){
+		fillnewplayercard.didrun = true;
+	}else{
+		$('#container_images').children().last().remove();	
+	}
+
+}
+
+function slideplayercards(player_counter){
+	var local_player_counter = player_counter;
+	var amount_of_cards = 9;
+
+	for(i = 0; i < amount_of_cards; i++, local_player_counter--){
+		$('#n' + local_player_counter + '_playercard').animate({left: '+=230px'});
+			
+			if(i === 0){
+				addnewplayercard(local_player_counter);
+			}
+
+		if(local_player_counter === 0){
+			local_player_counter = 1283;
+		}
+
+	}
+	applySlideEffects();
+	fillnewplayercard();
+}
+
+function addnewplayercard(local_player_counter){
+	$('#n' + (player_counter-1) + "_playercard").promise().done(function(){
+		$('#container_images').prepend('<div class="player_card_carrousel" id="n' + local_player_counter + "_playercard" + '"></div>');
+		$('#n' + local_player_counter + '_playercard').css("margin-left", "-490px");
+	});
+}
+
+function applySlideEffects(){
+	var playercards = $('.player_card_carrousel');
+
+	$('.player_card_carrousel').addClass('player_card_carrousel_blur');
+	
+	for(i = playercards.length-1; i >= 0; i--){
+		if(i === Math.ceil((playercards.length/2-1))){
+			playercards[i].classList.remove('player_card_carrousel_blur');
+		}
+	}
+}
+
+
+
+
+/*//Automatic slideshow
+function slideShow(slideIndex){
+	var slides = document.getElementsByClassName("slide_images");
+	var dots = document.getElementsByClassName("slide_dot");
+
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+		dots[i].style.background = "silver";
+	}
+
+	slides[slideIndex].style.display = "block";
+	dots[slideIndex].style.background = "#717171";
+	currentSlideIndex++;
+
+	if(slides.length === currentSlideIndex){
+		currentSlideIndex = 0;
+	}
+}*/
+
+/*//Clicking a dot 
+$('.slide_dot').on('click', function(){
+	var slides = document.getElementsByClassName("slide_images");
+	var dots = document.getElementsByClassName("slide_dot");
+	for (i = 0; i < dots.length; i++) {
+		//slides[i].style.display = "none";
+		dots[i].style.background = "silver";
+
+		if($(this).is(dots[i])){
+			//slides[i].style.display = "block";
+			dots[i].style.background = "#717171";
+
+			if(slides.length === i){
+				currentSlideIndex = 0;
+			}else{
+				currentSlideIndex = i;
+			}
+
+		}
+	}
+
+});*/
+		
+window.setInterval(function(){
+	slideplayercards(player_counter);
+}, 2000);

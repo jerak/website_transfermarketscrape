@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#body{
+  	background: radial-gradient(at 70% 30%, rgba(0, 0, 50, 0.5), rgba(0,0,26, 1));
+    background-attachment: fixed;
+   	height: 1000px;
+   	overflow-x: hidden;
+}
+
+/* Image slider (playercards) */
+#carrousel_container{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin: auto;
+	overflow:hidden;
+
+}
+
+/* Navigation Bar */
+#container_navigationbar{
+  	background-opacity:0.5;
+	text-align: center;
+	overflow: hidden;
+	margin: auto;
+  	width: 80%;
+  	border-top: 1px black solid;
+}
+
+.navbar_item{
+	display: inline-block;
+  	padding: 16px 16px;
+	height: 100%;
+ 	text-decoration: none;
+  	color:black;
+}
+
+.navbar_item:hover{
+	
+  cursor: pointer;
+  border: 1px rgba(218,165,32, 1) solid;
+  padding: 15px 15px;
+}
+
+/* Main content of this webpage */
+#maintext{
+	width: 80%;
+	margin: auto;
+	padding: 5px;
+	color: #faebd7;
+}
+
+#wrapper_text_divs{
+	width: 100%;
+	height: 500px;
+	text-align: center;
+}
+
+.textdiv{
+	position: relative;
+	width: 300px;
+	margin: 10px;
+	height: 290px;
+	padding: 10px 20px;
+	display: inline-block;
+	overflow-y: hidden;
+	vertical-align: top;
+}
+
+.textdiv h1{
+	color: #faebd7;
+}
+
+.textdiv p{
+	text-align: justify;
+	overflow:hidden;
+	padding-bottom: 10px;
+	height: 200px;
+}
+
+.textdiv ul{
+	text-align: justify;
+	overflow-y:hidden;
+	padding-bottom: 10px;
+	height: 200px;
+}
+
+.textdiv li{
+	text-align: justify;
+}
+
+.continue_button{
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+}
+
+/*#opzetspel_text{
+	border:1px black solid;
+	display: inline-block;
+}
+
+#spelregels_text{
+	border: 1px red solid;
+	display: inline-block;
+}
+
+#punten_text{
+	border:1px green solid;
+	display: inline-block;
+}*/
+
+
+/* This changes the default scrollbar */
+
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-button{
+
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  height:50px;
+  background-color: silver;
+  border: 1px #444444 inset;
+}

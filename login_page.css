@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+	border:0;
+	font-family:"Georgia";
+}
+
+body{
+ /* The image used */
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/11/10/47/grass-2938800_960_720.jpg");
+
+	/* Full height */
+    height: 100%; 
+	width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px; 
+	width: 10%;
+	height: 200px;
+	margin: 5% auto 0%;
+	border: #000000 1px solid;
+	box-sizing:border-box; /*honours the rule max 100% width (no horizontal scrollbar) */
+	background-color: white;
+}
+
+form{
+	width: 30%;
+	border: 3px solid #f1f1f1;
+    overflow:hidden ;
+	margin: 0% auto 10%;
+	background-color: #022D41;
+}
+
+#label_inloggen{
+	font-size: 25px;
+	color: #4183D7;
+	margin: 10px 10px 0px 5%;
+	display: inline-block;
+}
+
+#div_wrapper_email_gebruikersnaam{
+	width: 90%;
+	line-height: 28px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    display: block;
+	padding: 0;
+}
+
+input[type=email_gebruikersnaam] {
+	width: 90%;
+	line-height: 28px;
+	padding: 12px 5% 12px 5%;
+    border: 0;
+    display: inline-block;
+}
+
+#div_wrapper_wachtwoord{
+	width: 90%;
+	line-height: 28px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    display: block;
+	padding: 0;
+}
+
+input[type=wachtwoord]{
+	display:inline-block;
+	border:0;
+	width: 80%;
+	line-height: 28px;
+	padding: 12px 0% 12px 5%;
+}
+
+#span_wachtwoord{
+	color:  rgba(2,41,82,1);
+	width: 15%;
+	font-size: 10px;
+	float:right;
+	display:inline-block;
+	line-height:52px;
+	text-align: center;
+	background-color: white;
+
+}
+
+#span_wachtwoord:hover{
+	color:  rgba(2,41,82,.5);
+	cursor:pointer;
+}
+
+.form_buttons{
+	width: 25%;
+	cursor: pointer;
+}
+
+.form_buttons:hover {
+    opacity: 0.8;
+    display:inline-block;
+	transform: translated(0px,0px,0px);	
+}
+
+#button_registreer{
+	background-color: #4183D7;
+	border-radius: 5px;
+	border-style: none;
+	box-shadow: #38549D 0 5px 0 0;
+	color: #FFFFFF;
+	outline-style: none;
+	padding: 12px 20px;
+	margin: 0px 5px 10px 5%;
+	float:left;
+
+}
+
+#button_login{
+	background-color: #4183D7;
+	border-radius: 5px;
+	border-style: none;
+	box-shadow: #38549D 0 5px 0 0;
+	color: #FFFFFF;
+	outline-style: none;
+	padding: 12px 20px;
+	margin: 0px 5% 10px 5px;
+	float:right;
+}
+
+

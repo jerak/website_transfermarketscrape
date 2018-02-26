@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title id="title">Top Coach</title>
+
+  	<link rel="stylesheet" href="team_new.css" type="text/css" />
+
+</head>
+<body id="body">
+	<!--Image slider-->
+	<div id="carrousel_container">
+
+		<div id="container_images" >
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n9_playercard"><img class="player_card_carrousel_img" id="n9_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n8_playercard"><img class="player_card_carrousel_img" id="n8_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n7_playercard"><img class="player_card_carrousel_img" id="n7_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n6_playercard"><img class="player_card_carrousel_img" id="n6_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n5_playercard"><img class="player_card_carrousel_img" id="n5_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n4_playercard"><img class="player_card_carrousel_img" id="n4_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n3_playercard"><img class="player_card_carrousel_img" id="n3_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n2_playercard"><img class="player_card_carrousel_img" id="n2_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1_playercard"><img class="player_card_carrousel_img" id="n1_playercard_image"></img></div>
+			<div class="player_card_carrousel" id="n0_playercard"><img class="player_card_carrousel_img" id="n0_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1282_playercard"><img class="player_card_carrousel_img" id="n1282_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1281_playercard"><img class="player_card_carrousel_img" id="n1281_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1280_playercard"><img class="player_card_carrousel_img" id="n1280_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1279_playercard"><img class="player_card_carrousel_img" id="n1279_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1278_playercard"><img class="player_card_carrousel_img" id="n1278_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1277_playercard"><img class="player_card_carrousel_img" id="n1277_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1276_playercard"><img class="player_card_carrousel_img" id="n1276_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1275_playercard"><img class="player_card_carrousel_img" id="n1275_playercard_image"></img></div>
+			<div class="player_card_carrousel player_card_carrousel_blur" id="n1274_playercard"><img class="player_card_carrousel_img" id="n1274_playercard_image"></img></div>
+
+		</div>
+	</div>
+
+
+	<!--Navigation bar-->
+	<div id="container_navigationbar">
+		<a class="navbar_item">Team</a>
+		<a href="/website_transfermarketscrape/spelregels.html" class="navbar_item">Spelregels</a>
+		<a href="/website_transfermarketscrape/tussenstand.html" class="navbar_item">Tussenstand</a>
+		<a class="navbar_item">Topscorers</a>
+		<a class="navbar_item">Punten</a>
+		<a class="navbar_item">Over ons</a>
+	</div>
+
+	<!-- Contant such as pitch, jerseys, all content between navigation bar and footer -->
+	<div id="main_content">
+		<div id="pitch_image_wrapper">
+			<table id="table_on_pitch">
+			</table>
+		</div>
+
+		<div id="rules_wrapper"> 
+			<div id="rules_title">Rules
+			</div>
+			<table id="table_money_accumulator">
+				<tbody>
+					<tr>
+						<td class="money_accumulator">Money limit:</td>
+						<td class="money_accumulator money_updater">€70.000.000,-</td>
+					</tr>
+					<tr>
+						<td class="money_accumulator">Total money spend:</td>
+						<td class="money_accumulator money_updater">€0,-</td>
+					</tr>
+					<tr>
+						<td class="money_accumulator">Total money left:</td>
+						<td class="money_accumulator money_updater">€70.000.000,-</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="rule_withincashlimit">Within cash limit
+				<div class="check_icon_div"> 
+					<img class="check_icon" src="/website_transfermarketscrape/other_images/icon_check.png" ></img>
+				</div>
+			</div>
+			<div id="rule_oneplayerpercountry">One player per country
+				<div class="check_icon_div">
+					<img class="check_icon" src="/website_transfermarketscrape/other_images/icon_check.png" ></img>
+				</div>
+			</div>
+			<div id="rule_elevenplayersselected">Eleven players 
+				<div class="check_icon_div">
+					<img class="check_icon" src="/website_transfermarketscrape/other_images/icon_cross.png" ></img>
+				</div>
+			</div>
+
+			<button id="confirmbutton" type="button">Confirm Team</button>
+
+			<div id="plus_icon">-
+			</div>
+		</div>
+	</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      
+      <div id="wrapper_countryimages">
+        <table class="countrydatabase_table">
+          <tr>
+              <td rowspan="2" id="td_earthflag"><img class="countryimages" id="earthflag" value="Earth" src="../website_transfermarketscrape/Country_Images/Earth.png"></img></td>
+              <td><img class="countryimages" value="Algeria" src="../website_transfermarketscrape/Country_Images/Algeria.png"></img></td>
+              <td><img class="countryimages" value="Argentina" src="../website_transfermarketscrape/Country_Images/Argentina.png"></img></td>
+              <td><img class="countryimages" value="Australia" src="../website_transfermarketscrape/Country_Images/Australia.png"></img></td>
+              <td><img class="countryimages" value="Belgium" src="../website_transfermarketscrape/Country_Images/Belgium.png"></img></td>
+              <td><img class="countryimages" value="Bosnia-Herzegovina" src="../website_transfermarketscrape/Country_Images/Bosnia-Herzegovina.png"></img></td>
+              <td><img class="countryimages" value="Brazil" src="../website_transfermarketscrape/Country_Images/Brazil.png"></img></td>
+              <td><img class="countryimages" value="Cameroon" src="../website_transfermarketscrape/Country_Images/Cameroon.png"></img></td>
+              <td><img class="countryimages" value="Chile" src="../website_transfermarketscrape/Country_Images/Chile.png"></img></td>
+              <td><img class="countryimages" value="Colombia" src="../website_transfermarketscrape/Country_Images/Colombia.png"></img></td>
+              <td><img class="countryimages" value="Costa%20Rica" src="../website_transfermarketscrape/Country_Images/Costa Rica.png"></img></td>
+              <td><img class="countryimages" value="Croatia" src="../website_transfermarketscrape/Country_Images/Croatia.png"></img></td>
+              <td><img class="countryimages" value="Ecuador" src="../website_transfermarketscrape/Country_Images/Ecuador.png"></img></td>
+              <td><img class="countryimages" value="England" src="../website_transfermarketscrape/Country_Images/England.png"></img></td>
+              <td><img class="countryimages" value="France" src="../website_transfermarketscrape/Country_Images/France.png"></img></td>
+              <td><img class="countryimages" value="Germany" src="../website_transfermarketscrape/Country_Images/Germany.png"></img></td>
+              <td><img class="countryimages" value="Ghana" src="../website_transfermarketscrape/Country_Images/Ghana.png"></img></td>
+          </tr>
+          <tr>
+              <td><img class="countryimages" value="Greece" src="../website_transfermarketscrape/Country_Images/Greece.png"></img></td>
+              <td><img class="countryimages" value="Honduras" src="../website_transfermarketscrape/Country_Images/Honduras.png"></img></td>
+              <td><img class="countryimages" value="Iran" src="../website_transfermarketscrape/Country_Images/Iran.png"></img></td>
+              <td><img class="countryimages" value="Italy" src="../website_transfermarketscrape/Country_Images/Italy.png"></img></td>
+              <td><img class="countryimages" value="Ivory%20Coast" src="../website_transfermarketscrape/Country_Images/Ivory Coast.png"></img></td>
+              <td><img class="countryimages" value="Japan" src="../website_transfermarketscrape/Country_Images/Japan.png"></img></td>
+              <td><img class="countryimages" value="Mexico" src="../website_transfermarketscrape/Country_Images/Mexico.png"></img></td>
+              <td><img class="countryimages" value="Netherlands" src="../website_transfermarketscrape/Country_Images/Netherlands.png"></img></td>
+              <td><img class="countryimages" value="Nigeria" src="../website_transfermarketscrape/Country_Images/Nigeria.png"></img></td>
+              <td><img class="countryimages" value="Portugal" src="../website_transfermarketscrape/Country_Images/Portugal.png"></img></td>
+              <td><img class="countryimages" value="Russia" src="../website_transfermarketscrape/Country_Images/Russia.png"></img></td>
+              <td><img class="countryimages" value="South%20Korea" src="../website_transfermarketscrape/Country_Images/South Korea.png"></img></td>
+              <td><img class="countryimages" value="Spain" src="../website_transfermarketscrape/Country_Images/Spain.png"></img></td>
+              <td><img class="countryimages" value="Switzerland" src="../website_transfermarketscrape/Country_Images/Switzerland.png"></img></td>
+              <td><img class="countryimages" value="United%20States" src="../website_transfermarketscrape/Country_Images/United States.png"></img></td>
+              <td><img class="countryimages" value="Uruguay" src="../website_transfermarketscrape/Country_Images/Uruguay.png"></img></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="wrapper_players">
+        <table class="playerdatabase_table" cellspacing="0">
+          <tr class="playerdatabase_rows">
+          <th class="column_country_img"></th>
+          <th class="column_name" ><input type="search" id="column_name_searchbox" onkeyup="search()" placeholder="Search for names"></th>
+          <th class="column_positie"><select type="text" id="column_positie_searchbox" onchange="search()"> 
+            <option value="ALLE POSITIES">Alle posities</option>
+            <option value="aanvaller">Aanvaller</option>
+            <option value="middenvelder">Middenvelder</option>
+            <option value="verdediger">Verdediger</option>
+            <option value="keeper">Keeper</option>
+          </th>
+          <th class="column_waarde"><div id="wrapper_column_waarde"><span id="column_waarde_sort"></span><input type="search" id="column_waarde_searchbox" onkeyup="search()" placeholder="Enter maximum value"></div></th>
+          </tr>
+        </table>
+      </div>
+
+      <div id="playerprofile">
+      </div>
+
+  </div>
+
+</div>
+
+<div id="footer">
+
+	<div id="footer_bottomCol">
+		<div id="footer_bottomCol_left" class="footer_bottomCol_class">
+			<span>© 2017 Jeroen, Tim, Dennis en Bart</span>
+		</div>
+		<div id="footer_bottomCol_center" class="footer_bottomCol_class">
+			<ul id="socialmedia">
+				<li class="socialmedia_item"><img src="/website_transfermarketscrape/other_images/facebook.png"></img></li>
+				<li class="socialmedia_item"><img src="/website_transfermarketscrape/other_images/twitter.png"></img></li>
+				<li class="socialmedia_item"><img src="/website_transfermarketscrape/other_images/instagram.png"></img></li>
+				<li class="socialmedia_item"><img src="/website_transfermarketscrape/other_images/linkedin.png"></img></li>
+			</ul>
+		</div>
+		<div id="footer_bottomCol_right" class="footer_bottomCol_class">
+			<ul id="menu_privacy">
+				<li class="menu_privacy_item">Privacy Policy</li>
+				<li class="menu_privacy_item">Sitemap</li>
+				<li class="menu_privacy_item">Support</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+	<script src="jquery-3.2.1.js"></script>
+ 	<script src="team_new.js"></script>
+</body>
+</html>
